@@ -21,7 +21,7 @@ class AccessManagementSystem:
         self.visitors = {"V001", "V002"}
 
         self.all_users = self.students | self.faculty | self.staff | self.visitors
-        self.authorized_users = {"S001", "S002", "F001", "F002","F003","F004","F005", "ST001", "ST002","ST004","ST005"}
+        self.authorized_users = {"S001", "S002", "F001", "F002", "ST001", "ST002"}
         self.restricted_users = {"S003", "V001", "V002"}
 
         self.rooms = {"R101", "R102", "R103", "R201", "R202"}
@@ -37,12 +37,8 @@ class AccessManagementSystem:
             "S005": {"R103"},
             "F001": {"R101", "R102", "R103", "R201", "R202"},
             "F002": {"R101", "R102", "R201"},
-            "F003": {"R103"},
-            "F004": {"R102", "R202"},
             "ST001": {"R101", "R102", "R103", "R201", "R202"},
             "ST002": {"R103", "R202"},
-            "ST004": {"R102", "R201"},
-            "ST005": {"R101", "R202"},
             "V001": {"R201"},
             "V002": set()
         }
