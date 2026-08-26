@@ -14,7 +14,7 @@ class AccessManagementSystem:
     """Core system implementing all required features - PURE PYTHON"""
     
     def __init__(self):
-        # FEATURE 2: SETS (User Classification) - Python sets
+        # FEATURE 2: SETS (User Classification)
         self.students = {"S001", "S002", "S003", "S004", "S005"}
         self.faculty = {"F001", "F002", "F003", "F004", "F005"}
         self.staff = {"ST001", "ST002", "ST003", "ST004", "ST005"}
@@ -28,7 +28,7 @@ class AccessManagementSystem:
         self.lab_rooms = {"R101", "R102"}
         self.lecture_rooms = {"R103", "R201", "R202"}
 
-        # FEATURE 3: RELATIONS - Python dictionary
+        # FEATURE 3: RELATIONS - 
         self.access_permissions = {
             "S001": {"R101", "R102", "R103"},
             "S002": {"R101", "R102"},
@@ -43,15 +43,15 @@ class AccessManagementSystem:
             "V002": set()
         }
 
-        # FEATURE 5: MATRICES - Python 2D list
+        # FEATURE 5: MATRICES -
         self.user_list = sorted(self.all_users)
         self.room_list = sorted(self.rooms)
         self.access_matrix = self._build_access_matrix()
 
-        # FEATURE 6: NUMBER THEORY - Python math.gcd()
+        # FEATURE 6: NUMBER THEORY gcd()
         self.user_access_levels = self._calculate_access_levels()
 
-    # FEATURE 1: PROPOSITIONAL LOGIC - Python method
+    # FEATURE 1: PROPOSITIONAL LOGIC 
     def evaluate_predicate_logic(self, user, room):
         """Pure Python logic evaluation"""
         is_registered = user in self.all_users
@@ -62,7 +62,7 @@ class AccessManagementSystem:
         can_access = is_registered and is_authorized and (not is_restricted) and has_permission
         return can_access
 
-    # FEATURE 4: BOOLEAN FUNCTIONS - Python method
+    # FEATURE 4: BOOLEAN FUNCTIONS 
     def evaluate_boolean_function(self, A, B, C, D):
         """Pure Python boolean evaluation"""
         return bool(A and B and C and (not D))
@@ -94,7 +94,7 @@ class AccessManagementSystem:
                 levels[user] = 0
         return levels
 
-    # FEATURE 7: PROOF OF CONSISTENCY - Python method
+    # FEATURE 7: PROOF OF CONSISTENCY 
     def verify_rule_consistency(self, user):
         if user in self.restricted_users:
             for room in self.rooms:
