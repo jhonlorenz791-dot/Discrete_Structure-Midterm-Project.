@@ -1,8 +1,7 @@
 """
 Logic-Based Student Access and Data Management System
 Bohol Island State University - Midterm Project
-Flask Web Application - Python Backend
-"""
+Flask Web Application"""
 
 from flask import Flask, render_template, jsonify, request
 import math
